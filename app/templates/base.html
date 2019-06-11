@@ -1,0 +1,15 @@
+<html>
+    <head>
+      {% if title %}
+      <title>{{ title }} - RandomToDo</title>
+      {% else %}
+      <title>Welcome to RandomToDo</title>
+      {% endif %}
+    </head>
+    <body>
+        <div>RandomToDo: <a href={{ url_for('index') }}>Home</a></div>
+        <div><a href={{ url_for('login') }}>Login</a></div>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>
